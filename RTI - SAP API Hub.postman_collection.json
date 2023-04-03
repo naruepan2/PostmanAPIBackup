@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "8133ad95-4445-4142-b9b2-2062392199eb",
+		"name": "RTI - SAP API Hub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10763294"
+	},
+	"item": [
+		{
+			"name": "GetOutbDeliveryHeader",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ZZ_CU_SAP_COM_0106",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "P@ssword12345678901234567890",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "config_authType",
+						"value": "Basic",
+						"type": "text"
+					},
+					{
+						"key": "config_packageName",
+						"value": "SAPS4HANACloud",
+						"type": "text"
+					},
+					{
+						"key": "config_actualUrl",
+						"value": "https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"type": "text"
+					},
+					{
+						"key": "config_urlPattern",
+						"value": "https://{host}:{port}/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"type": "text"
+					},
+					{
+						"key": "config_apiName",
+						"value": "API_OUTBOUND_DELIVERY_SRV_0002",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "Fetch",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')",
+					"protocol": "https",
+					"host": [
+						"my403162",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"port": "443",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"A_OutbDeliveryHeader('80000039')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var token = postman.getResponseHeader(\"x-csrf-token\");\r",
+							"console.log(\"token:\" + token);\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"csrftoken\", token);\r",
+							"\r",
+							"var etag = postman.getResponseHeader(\"etag\");\r",
+							"console.log(\"token:\" + etag);\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"etag\", etag);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ZZ_CU_SAP_COM_0106",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "P@ssword12345678901234567890",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-Token",
+						"value": "fetch",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')",
+					"protocol": "https",
+					"host": [
+						"my403162",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"port": "443",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"A_OutbDeliveryHeader('80000039')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchOutbDeliveryHeader",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ZZ_CU_SAP_COM_0106",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "P@ssword12345678901234567890",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "{{csrftoken}}",
+						"type": "text"
+					},
+					{
+						"key": "config_authType",
+						"value": "Basic",
+						"type": "text"
+					},
+					{
+						"key": "config_packageName",
+						"value": "SAPS4HANACloud",
+						"type": "text"
+					},
+					{
+						"key": "config_actualUrl",
+						"value": "https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"type": "text"
+					},
+					{
+						"key": "config_urlPattern",
+						"value": "https://{host}:{port}/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"type": "text"
+					},
+					{
+						"key": "config_apiName",
+						"value": "API_OUTBOUND_DELIVERY_SRV_0002",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "{{etag}}",
+						"type": "text"
+					},
+					{
+						"key": "If-None-Match",
+						"value": "{{etag}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "If-Match",
+						"value": "W/\"'0002'\"",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"d\": {\r\n        \"__metadata\": {\r\n            \"id\": \"https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')\",\r\n            \"uri\": \"https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')\",\r\n            \"type\": \"API_OUTBOUND_DELIVERY_SRV.A_OutbDeliveryHeaderType\",\r\n            \"etag\": \"W/\\\"'0002'\\\"\"\r\n        },\r\n        \"ActualDeliveryRoute\": \"\",\r\n        \"Shippinglocationtimezone\": \"UTC+7\",\r\n        \"ActualGoodsMovementDate\": null,\r\n        \"Receivinglocationtimezone\": \"UTC+7\",\r\n        \"ActualGoodsMovementTime\": \"PT00H00M00S\",\r\n        \"BillingDocumentDate\": \"/Date(1680480000000)/\",\r\n        \"BillOfLading\": \"\",\r\n        \"CompleteDeliveryIsDefined\": false,\r\n        \"ConfirmationTime\": \"PT00H00M00S\",\r\n        \"CreatedByUser\": \"CB9980000054\",\r\n        \"CreationDate\": \"/Date(1680480000000)/\",\r\n        \"CreationTime\": \"PT04H31M28S\",\r\n        \"CustomerGroup\": \"01\",\r\n        \"DeliveryBlockReason\": \"\",\r\n        \"DeliveryDate\": \"/Date(1680393600000)/\",\r\n        \"DeliveryDocument\": \"80000039\",\r\n        \"DeliveryDocumentBySupplier\": \"\",\r\n        \"DeliveryDocumentType\": \"LF\",\r\n        \"DeliveryIsInPlant\": false,\r\n        \"DeliveryPriority\": \"00\",\r\n        \"DeliveryTime\": \"PT17H00M00S\",\r\n        \"DeliveryVersion\": \"0002\",\r\n        \"DepreciationPercentage\": \"0.00\",\r\n        \"DistrStatusByDecentralizedWrhs\": \"\",\r\n        \"DocumentDate\": \"/Date(1680480000000)/\",\r\n        \"ExternalIdentificationType\": \"\",\r\n        \"ExternalTransportSystem\": \"\",\r\n        \"FactoryCalendarByCustomer\": \"\",\r\n        \"GoodsIssueOrReceiptSlipNumber\": \"\",\r\n        \"GoodsIssueTime\": \"PT17H00M00S\",\r\n        \"HandlingUnitInStock\": \"\",\r\n        \"HdrGeneralIncompletionStatus\": \"C\",\r\n        \"HdrGoodsMvtIncompletionStatus\": \"C\",\r\n        \"HeaderBillgIncompletionStatus\": \"C\",\r\n        \"HeaderBillingBlockReason\": \"\",\r\n        \"HeaderDelivIncompletionStatus\": \"C\",\r\n        \"HeaderGrossWeight\": \"210.000\",\r\n        \"HeaderNetWeight\": \"210.000\",\r\n        \"HeaderPackingIncompletionSts\": \"C\",\r\n        \"HeaderPickgIncompletionStatus\": \"C\",\r\n        \"HeaderVolume\": \"0.000\",\r\n        \"HeaderVolumeUnit\": \"\",\r\n        \"HeaderWeightUnit\": \"KG\",\r\n        \"IncotermsClassification\": \"EXW\",\r\n        \"IncotermsTransferLocation\": \"Ex Work\",\r\n        \"IntercompanyBillingDate\": null,\r\n        \"InternalFinancialDocument\": \"\",\r\n        \"IsDeliveryForSingleWarehouse\": \"\",\r\n        \"IsExportDelivery\": \"\",\r\n        \"LastChangeDate\": \"/Date(1680480000000)/\",\r\n        \"LastChangedByUser\": \"CC0000000003\",\r\n        \"LoadingDate\": \"/Date(1680393600000)/\",\r\n        \"LoadingPoint\": \"\",\r\n        \"LoadingTime\": \"PT17H00M00S\",\r\n        \"MeansOfTransport\": \"\",\r\n        \"MeansOfTransportRefMaterial\": \"\",\r\n        \"MeansOfTransportType\": \"\",\r\n        \"OrderCombinationIsAllowed\": true,\r\n        \"OrderID\": \"\",\r\n        \"OverallDelivConfStatus\": \"\",\r\n        \"OverallDelivReltdBillgStatus\": \"A\",\r\n        \"OverallGoodsMovementStatus\": \"A\",\r\n        \"OverallIntcoBillingStatus\": \"\",\r\n        \"OverallPackingStatus\": \"\",\r\n        \"OverallPickingConfStatus\": \"\",\r\n        \"OverallPickingStatus\": \"A\",\r\n        \"OverallProofOfDeliveryStatus\": \"\",\r\n        \"OverallSDProcessStatus\": \"A\",\r\n        \"OverallWarehouseActivityStatus\": \"\",\r\n        \"OvrlItmDelivIncompletionSts\": \"C\",\r\n        \"OvrlItmGdsMvtIncompletionSts\": \"C\",\r\n        \"OvrlItmGeneralIncompletionSts\": \"C\",\r\n        \"OvrlItmPackingIncompletionSts\": \"C\",\r\n        \"OvrlItmPickingIncompletionSts\": \"C\",\r\n        \"PaymentGuaranteeProcedure\": \"\",\r\n        \"PickedItemsLocation\": \"\",\r\n        \"PickingDate\": \"/Date(1683072000000)/\",\r\n        \"PickingTime\": \"PT17H00M00S\",\r\n        \"PlannedGoodsIssueDate\": \"/Date(1680393600000)/\",\r\n        \"ProofOfDeliveryDate\": null,\r\n        \"ProposedDeliveryRoute\": \"\",\r\n        \"ReceivingPlant\": \"\",\r\n        \"RouteSchedule\": \"\",\r\n        \"SalesDistrict\": \"\",\r\n        \"SalesOffice\": \"\",\r\n        \"SalesOrganization\": \"1000\",\r\n        \"SDDocumentCategory\": \"J\",\r\n        \"ShipmentBlockReason\": \"\",\r\n        \"ShippingCondition\": \"01\",\r\n        \"ShippingPoint\": \"1100\",\r\n        \"ShippingType\": \"\",\r\n        \"ShipToParty\": \"1100001\",\r\n        \"SoldToParty\": \"1100001\",\r\n        \"SpecialProcessingCode\": \"\",\r\n        \"StatisticsCurrency\": \"THB\",\r\n        \"Supplier\": \"\",\r\n        \"TotalBlockStatus\": \"\",\r\n        \"TotalCreditCheckStatus\": \"\",\r\n        \"TotalNumberOfPackage\": \"00000\",\r\n        \"TransactionCurrency\": \"THB\",\r\n        \"TransportationGroup\": \"0001\",\r\n        \"TransportationPlanningDate\": \"/Date(1680393600000)/\",\r\n        \"TransportationPlanningStatus\": \"\",\r\n        \"TransportationPlanningTime\": \"PT17H00M00S\",\r\n        \"UnloadingPointName\": \"\",\r\n        \"Warehouse\": \"\",\r\n        \"WarehouseGate\": \"\",\r\n        \"WarehouseStagingArea\": \"\",\r\n        \"to_DeliveryDocumentText\": {\r\n            \"__deferred\": {\r\n                \"uri\": \"https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')/to_DeliveryDocumentText\"\r\n            }\r\n        },\r\n        \"to_HandlingUnitHeaderDelivery\": {\r\n            \"__deferred\": {\r\n                \"uri\": \"https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')/to_HandlingUnitHeaderDelivery\"\r\n            }\r\n        },\r\n        \"to_DeliveryDocumentPartner\": {\r\n            \"__deferred\": {\r\n                \"uri\": \"https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')/to_DeliveryDocumentPartner\"\r\n            }\r\n        },\r\n        \"to_DeliveryDocumentItem\": {\r\n            \"__deferred\": {\r\n                \"uri\": \"https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')/to_DeliveryDocumentItem\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my403162.s4hana.cloud.sap:443/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000039')",
+					"protocol": "https",
+					"host": [
+						"my403162",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"port": "443",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"A_OutbDeliveryHeader('80000039')"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "P@ssword12345678901234567890",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "ZZ_CS_SAP_COM_0106\n",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CSRF-Token",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
