@@ -1,0 +1,144 @@
+ZUSER_DEMO_PROG_000
+P@ssw0rd12345678901234567890
+
+https://my402498.s4hana.cloud.sap/sap/opu/odata4/sap/zsb_atrav_000/srvd/sap/zsd_atrav_000/0001/
+
+https://my402410.s4hana.cloud.sap/sap/opu/odata4/sap/zsb_atrav_000/srvd/sap/zsd_atrav_000/0001/
+
+https://my402410.s4hana.cloud.sap/sap/opu/odata4/sap/zapi_atrav_000/srvd_a2x/sap/zsd_atrav_000/0001/
+
+https://my402410.s4hana.cloud.sap/sap/opu/odata/sap/ZSB_ATRAV_000_O2
+
+https://my402498.s4hana.cloud.sap/sap/opu/odata4/sap/zsb_atrav_000/srvd/sap/zsd_atrav_000/0001/
+
+
+ZABAP_TEST_NWR_4
+YYNK900107
+
+
+https://api.cf.us10-001.hana.ondemand.com
+
+------------------------------------------------------------
+
+ZZ_CU_SAP_COM_0106
+P@ssword12345678901234567890
+
+------------------------------------------------------------
+TEST_API
+Thailand@123456789123456789
+
+
+------------------------------------------------------------
+
+{
+    "d": {    
+        "ActualDeliveryRoute": "",
+        "Shippinglocationtimezone": "UTC+7",
+        "ActualGoodsMovementDate": null,
+        "Receivinglocationtimezone": "UTC+7",
+        "ActualGoodsMovementTime": "PT00H00M00S",
+        "BillingDocumentDate": "/Date(1680480000000)/",
+        "BillOfLading": "",
+        "CompleteDeliveryIsDefined": false,
+        "ConfirmationTime": "PT00H00M00S",
+        "CreatedByUser": "CB9980000054",
+        "CreationDate": "/Date(1680480000000)/",
+        "CreationTime": "PT04H31M28S",
+        "CustomerGroup": "01",
+        "DeliveryBlockReason": "",
+        "DeliveryDate": "/Date(1680393600000)/",
+        "DeliveryDocument": "80000039",
+        "DeliveryDocumentBySupplier": "",
+        "DeliveryDocumentType": "LF",
+        "DeliveryIsInPlant": false,
+        "DeliveryPriority": "00",
+        "DeliveryTime": "PT17H00M00S",
+        "DeliveryVersion": "0001",
+        "DepreciationPercentage": "0.00",
+        "DistrStatusByDecentralizedWrhs": "",
+        "DocumentDate": "/Date(1680480000000)/",
+        "ExternalIdentificationType": "",
+        "ExternalTransportSystem": "",
+        "FactoryCalendarByCustomer": "",
+        "GoodsIssueOrReceiptSlipNumber": "",
+        "GoodsIssueTime": "PT17H00M00S",
+        "HandlingUnitInStock": "",
+        "HdrGeneralIncompletionStatus": "C",
+        "HdrGoodsMvtIncompletionStatus": "C",
+        "HeaderBillgIncompletionStatus": "C",
+        "HeaderBillingBlockReason": "",
+        "HeaderDelivIncompletionStatus": "C",
+        "HeaderGrossWeight": "120.000",
+        "HeaderNetWeight": "120.000",
+        "HeaderPackingIncompletionSts": "C",
+        "HeaderPickgIncompletionStatus": "C",
+        "HeaderVolume": "0.000",
+        "HeaderVolumeUnit": "",
+        "HeaderWeightUnit": "KG",
+        "IncotermsClassification": "EXW",
+        "IncotermsTransferLocation": "Ex Work",
+        "IntercompanyBillingDate": null,
+        "InternalFinancialDocument": "",
+        "IsDeliveryForSingleWarehouse": "",
+        "IsExportDelivery": "",
+        "LastChangeDate": null,
+        "LastChangedByUser": "",
+        "LoadingDate": "/Date(1680393600000)/",
+        "LoadingPoint": "",
+        "LoadingTime": "PT17H00M00S",
+        "MeansOfTransport": "",
+        "MeansOfTransportRefMaterial": "",
+        "MeansOfTransportType": "",
+        "OrderCombinationIsAllowed": true,
+        "OrderID": "",
+        "OverallDelivConfStatus": "",
+        "OverallDelivReltdBillgStatus": "A",
+        "OverallGoodsMovementStatus": "A",
+        "OverallIntcoBillingStatus": "",
+        "OverallPackingStatus": "",
+        "OverallPickingConfStatus": "",
+        "OverallPickingStatus": "A",
+        "OverallProofOfDeliveryStatus": "",
+        "OverallSDProcessStatus": "A",
+        "OverallWarehouseActivityStatus": "",
+        "OvrlItmDelivIncompletionSts": "C",
+        "OvrlItmGdsMvtIncompletionSts": "C",
+        "OvrlItmGeneralIncompletionSts": "C",
+        "OvrlItmPackingIncompletionSts": "C",
+        "OvrlItmPickingIncompletionSts": "C",
+        "PaymentGuaranteeProcedure": "",
+        "PickedItemsLocation": "",
+        "PickingDate": "/Date(1680393600000)/",
+        "PickingTime": "PT17H00M00S",
+        "PlannedGoodsIssueDate": "/Date(1680393600000)/",
+        "ProofOfDeliveryDate": null,
+        "ProposedDeliveryRoute": "",
+        "ReceivingPlant": "",
+        "RouteSchedule": "",
+        "SalesDistrict": "",
+        "SalesOffice": "",
+        "SalesOrganization": "1000",
+        "SDDocumentCategory": "J",
+        "ShipmentBlockReason": "",
+        "ShippingCondition": "01",
+        "ShippingPoint": "1100",
+        "ShippingType": "",
+        "ShipToParty": "1100001",
+        "SoldToParty": "1100001",
+        "SpecialProcessingCode": "",
+        "StatisticsCurrency": "THB",
+        "Supplier": "",
+        "TotalBlockStatus": "",
+        "TotalCreditCheckStatus": "",
+        "TotalNumberOfPackage": "00000",
+        "TransactionCurrency": "THB",
+        "TransportationGroup": "0001",
+        "TransportationPlanningDate": "/Date(1680393600000)/",
+        "TransportationPlanningStatus": "",
+        "TransportationPlanningTime": "PT17H00M00S",
+        "UnloadingPointName": "",
+        "Warehouse": "",
+        "WarehouseGate": "",
+        "WarehouseStagingArea": ""
+    }
+}
